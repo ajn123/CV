@@ -8,6 +8,14 @@
 \RequirePackage{marvosym}
 \RequirePackage{hyperref}
 \RequirePackage[margin=0.5in]{geometry} % changes margins across the page
+\RequirePackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+\titlespacing\section{0pt}{0pt plus 2pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\item{0pt}{1pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+
 
 \titleformat{\section}         % Customise the \section command 
   {\Large\scshape\raggedright} % Make the \section headers large (\Large),
@@ -31,7 +39,7 @@
 
 \newcommand{\longcontact}[5]{
     \center{  {\Gentsroom} #1 \hfill {\large} \hfill {\ComputerMouse} #2 }
-    \center{ {\Letter} #3 \hfill {\Telefon} #4  \hfill #5}
+    \center{ {\Letter} #3 \hfill {\Telefon} #4  \hfill Github: #5}
 }
   
 \newcommand{\datedsection}[3]{%
@@ -58,7 +66,15 @@
 
 \newcommand{\workitemstwo}[2]{
     \begin{itemize}
+    \setlength\itemsep{0em}
     \item #1
     \item #2
+    \end{itemize}
+}
+
+\newcommand{\workitemsone}[1]{
+    \begin{itemize}
+    \setlength\itemsep{0em}
+    \item #1
     \end{itemize}
 }
