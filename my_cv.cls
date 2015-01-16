@@ -50,7 +50,7 @@
   \par % be sure to start a new line
   \Gentsroom\ #1 \hfill \ComputerMouse\ #2%
   \par\nopagebreak
-  \makebox[0pt][l]{\Letter\ #3}% zero width
+  \makebox[0pt][l]{\noindent\Letter\ #3}% zero width
   \hfill % fill
   \makebox[0pt][c]{\Telefon\ #4}% zero width
   \hfill % fill
@@ -73,7 +73,6 @@
 
 \newcommand{\name}[1]{
   \centerline{\Huge{#1}}
-  \hrulefill
 }
 
 
