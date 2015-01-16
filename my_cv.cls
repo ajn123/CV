@@ -7,7 +7,15 @@
 \RequirePackage{titlesec}
 \RequirePackage{marvosym}
 \RequirePackage{hyperref}
-\RequirePackage[margin=0.5in]{geometry} % changes margins across the page
+\RequirePackage{geometry} % changes margins across the page
+ \geometry{
+ left=5mm,
+ right=5mm,
+ top=5mm,
+ bottom=5mm,
+}
+
+
 \RequirePackage{enumitem}
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
@@ -18,7 +26,7 @@
 
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+  {\Large\scshape} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
@@ -37,16 +45,29 @@
     {\large\Large\Letter} #4 \ {\Large\Telefon} #5 }
 }
 
-\newcommand{\longcontact}[5]{
-    \center{  {\Gentsroom} #1 \hfill {\large} \hfill {\ComputerMouse} #2 }
-    \center{ {\Letter} #3 \hfill {\Telefon} #4  \hfill Github: #5}
+\newcommand{\longcontact}[5]{% <--- don't forget
+  \par % be sure to start a new line
+  \Gentsroom\ #1 \hfill \ComputerMouse\ #2%
+  \par\nopagebreak
+  \makebox[0pt][l]{\Letter\ #3}% zero width
+  \hfill % fill
+  \makebox[0pt][c]{\Telefon\ #4}% zero width
+  \hfill % fill
+  \makebox[0pt][r]{Github: #5}%
+  \par
 }
   
 \newcommand{\datedsection}[3]{%
   \section[#1]{#1 \hfill #2 \hfill #3}%
 }
 \newcommand{\datedsubsection}[3]{%
-  \subsection[#1]{#1 \hfill #2 \hfill #3}%
+  \subsection[#1]{
+  \makebox[0pt][l]{ #1}% zero width
+  \hfill % fill
+  \makebox[0pt][c]{ #2}% zero width
+  \hfill % fill
+  \makebox[0pt][r]{ #3}%
+  }%
 }
 
 \newcommand{\name}[1]{
