@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 JAN 2015 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 JAN 2015 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,6 +490,55 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks29
 \enit@inbox=\box38
 \enitdp@description=\count120
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
+\c@tracingmulticols=\count121
+\mult@box=\box39
+\multicol@leftmargin=\dimen169
+\c@unbalance=\count122
+\c@collectmore=\count123
+\doublecol@number=\count124
+\multicoltolerance=\count125
+\multicolpretolerance=\count126
+\full@width=\dimen170
+\page@free=\dimen171
+\premulticols=\dimen172
+\postmulticols=\dimen173
+\multicolsep=\skip47
+\multicolbaselineskip=\skip48
+\partial@page=\box40
+\last@line=\box41
+\maxbalancingoverflow=\dimen174
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\c@columnbadness=\count127
+\c@finalcolumnbadness=\count128
+\last@try=\dimen175
+\multicolovershoot=\dimen176
+\multicolundershoot=\dimen177
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
+\mc@col@check@num=\count129
 ))
 (./resume.aux)
 \openout1 = `resume.aux'.
@@ -508,7 +557,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-\AtBeginShipoutBox=\box39
+\AtBeginShipoutBox=\box65
 Package hyperref Info: Link coloring OFF on input line 3.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -517,7 +566,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count121
+\c@section@level=\count130
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -565,16 +614,16 @@ LaTeX Info: Redefining \nameref on input line 3.
 ABD: EveryShipout initializing macros
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen169
-\scratchbox=\box40
-\nofMPsegments=\count123
-\nofMParguments=\count124
+\scratchcounter=\count131
+\scratchdimen=\dimen178
+\scratchbox=\box66
+\nofMPsegments=\count132
+\nofMParguments=\count133
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen170
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen179
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -607,39 +656,35 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 56.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 56.
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
  (./resume.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: 4EA35681A1D5D255F72BBC93223D3873;774.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
+(rerunfilecheck)             Checksum: 1CF0EEDA762D811DCA3F4A705E2E1E1E;1012.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
  ) 
 Here is how much of TeX's memory you used:
- 16588 strings out of 493117
- 312326 string characters out of 6135433
- 389745 words of memory out of 5000000
- 19804 multiletter control sequences out of 15000+600000
+ 16704 strings out of 493117
+ 314079 string characters out of 6135433
+ 399782 words of memory out of 5000000
+ 19912 multiletter control sequences out of 15000+600000
  5558 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,63p,413b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,5n,63p,413b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
 sr/local/texlive/2014/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on resume.pdf (1 page, 78528 bytes).
+Output written on resume.pdf (1 page, 79695 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

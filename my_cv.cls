@@ -18,10 +18,11 @@
 
 \RequirePackage{tikz}
 \RequirePackage{enumitem}
+\RequirePackage{multicol}
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
 \titlespacing\section{0pt}{0pt plus 2pt minus 2pt}{5pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{10pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
 \titlespacing\item{0pt}{1pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 
