@@ -49,13 +49,13 @@
 
 \newcommand{\longcontact}[5]{% <--- don't forget
   \par % be sure to start a new line
-  \Gentsroom\ #1 \hfill \ComputerMouse\ #2%
+  \Gentsroom\ #1 \hfill \ComputerMouse\ \url{#2}%
   \par\nopagebreak
   \makebox[0pt][l]{\noindent\Letter\ #3}% zero width
   \hfill % fill
   \makebox[0pt][c]{\Telefon\ #4}% zero width
   \hfill % fill
-  \makebox[0pt][r]{\github #5}%
+  \makebox[0pt][r]{\github \url{#5}}%
   \par
 }
   
