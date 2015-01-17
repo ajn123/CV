@@ -67,7 +67,7 @@
 \newcommand{\datedsubsection}[3]{%
   \subsection[#1]{
  \begin{tabular}{l l l}
-#1 & \textbf{#2} & \textit{#3} \\ [1pt]
+#1 & \textbf{#2} & \textit{#3} \\ [2pt]
 \end{tabular}
   }%
 }
