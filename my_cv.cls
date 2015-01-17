@@ -25,7 +25,7 @@
 \titlespacing\subsection{0pt}{10pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
 \titlespacing\item{0pt}{1pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
-
+\addtolength{\parskip}{-0.5mm}
 
 \titleformat{\section}         % Customise the \section command 
   {\Large\scshape} % Make the \section headers large (\Large),
@@ -58,17 +58,17 @@
   \makebox[0pt][r]{\github \url{#5}}%
   \par
 }
+
+
   
 \newcommand{\datedsection}[3]{%
   \section[#1]{#1 \hfill #2 \hfill #3}%
 }
 \newcommand{\datedsubsection}[3]{%
   \subsection[#1]{
-  \makebox[0pt][l]{ #1}% zero width
-  \hfill % fill
-  \makebox[0pt][c]{ #2}% zero width
-  \hfill % fill
-  \makebox[0pt][r]{ #3}%
+ \begin{tabular}{l l l}
+#1 & \textbf{#2} & \textit{#3} \\ [1pt]
+\end{tabular}
   }%
 }
 
