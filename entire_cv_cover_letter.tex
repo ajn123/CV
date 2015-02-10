@@ -1,0 +1,191 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass{my_cv}
+ 
+% adjust the page margins
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Alex `A.J'}{Norton}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{2422 Nottingham Drive}{22043 Falls Church Virginia}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
+\email{alexnorton@vt.edu}                               % optional, remove / comment the line if not wanted
+\homepage{ajnorton.com}                         % optional, remove / comment the line if not wanted
+\social[github][github.com/ajn123]{ajn123}
+\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+\quote{Seeking a full time position in software development }                                 
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+\section{Education}
+\cventry{2011--2015}{Computer Science}{Virginia Tech}{Blacksburg, VA}{\textit{3.85/4.00}}{}  % arguments 3 to 6 can be left empty
+\begin{itemize}
+\item Majored in Computer Science with a Mathematics Minor
+\item Studied abroad in Oxford, England
+\end{itemize}
+
+\section{Work}
+\cventry{Summer 2014}{Software Developer Intern}{Amazon}{Seattle, WA}{}{Worked on implementing a semantic analyzer as an Eclipse plugin future}  % arguments 3 to 6 can be left empty
+\cventry{Summer 2013}{Software  Intern}{Cvent}{McLean, VA}{}{Implemented new logging library to allow for easy graphing and searching of errors; debugged information}  % arguments 3 to 6 can be left empty
+\cventry{October 2012--January 2013}{Digital Content Intern}{Modea}{Blacksburg, VA}{}{Image creation, batching, resizing, and optimization in Photoshop}  % arguments 3 to 6 can be left empty
+
+
+
+
+\section{Projects}
+\cvitemwithcomment{Ephemeral Hadoop}{Utilize unshared resources on computers to run batch jobs on Hadoop}{Senior Capstone}
+\cvitemwithcomment{Hokie Links}{Share class notes, comments, and links about Virginia Tech classes}{Ruby On Rails}
+\cvitemwithcomment{Schools Out API}{REST API to predict school closures based on weather}{Ruby On Rails}
+
+
+\section{Leadership}
+\cvitemwithcomment{Eagle Scout}{Refurbished my elementary school playground as a final project}{Boy Scouts}
+\cvitemwithcomment{Teaching Assistant}{Facilitated Intro to C programming and Intro to Python classes}{Virginia Tech}
+\cvitemwithcomment{Hokie Ambassador}{Give tours and presentations to aspiring Computer Science students}{Virginia Tech}
+
+
+\section{Experience}
+\cventry{2013}{Undergraduate Research}{S.O.F.I.A Android project}{Virginia Tech}{}{}  % arguments 3 to 6 can be left empty
+\begin{itemize}
+\item Development of game logic:  handling the main game loop, advanced timing controls, and other features so that intro CS students would not have to individually reinvent the logic
+\end{itemize}
+\cventry{2012--Now}{AppleJuiceTeaching}{Youtube Channel}{Internet}{}{}  % arguments 3 to 6 can be left empty
+\begin{itemize}
+\item Develop tutorials and references for easy comprehension about Computer Science best practices
+\end{itemize}
+
+
+\section{Skills}
+\cvlistdoubleitem{Ruby/Rails $\bigstar$   $\bigstar$   $\bigstar$  }{Linux  $\bigstar$   $\bigstar$   $\bigstar$ }
+\cvlistdoubleitem{Java  $\bigstar$  $\bigstar$   $\bigstar$ }{Git  $\bigstar$ $\bigstar$  $\bigstar$ }
+\cvlistdoubleitem{C  $\bigstar$   $\bigstar$   $\bigstar$ }{Javascript  $\bigstar$  $\bigstar$ }
+\cvlistdoubleitem{Adobe Illustrator  $\bigstar$  }{CSS  $\bigstar$  }
+
+
+\begin{itemize}
+\item  $\bigstar$ = Beginner, $\bigstar$ $\bigstar$ = Intermediate, $\bigstar$ $\bigstar$ $\bigstar$ = Proficient, $\bigstar$ $\bigstar$ $\bigstar$ $\bigstar$ = Expert
+
+\end{itemize}
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+\item Achievement 1;
+\item Achievement 2, with sub-achievements:
+  \begin{itemize}%
+  \item Sub-achievement (a);
+  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+    \begin{itemize}
+    \item Sub-sub-achievement i;
+    \item Sub-sub-achievement ii;
+    \item Sub-sub-achievement iii;
+    \end{itemize}
+  \item Sub-achievement (c);
+  \end{itemize}
+\item Achievement 3.
+\end{itemize}}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+\subsection{Miscellaneous}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Languages}
+\cvitemwithcomment{Language 1}{Skill level}{Comment}
+\cvitemwithcomment{Language 2}{Skill level}{Comment}
+\cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+\section{Computer skills}
+\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+\section{Interests}
+\cvitem{hobby 1}{Description}
+\cvitem{hobby 2}{Description}
+\cvitem{hobby 3}{Description}
+
+\section{Extra 1}
+\cvlistitem{Item 1}
+\cvlistitem{Item 2}
+\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+\section{Extra 2}
+\cvlistdoubleitem{Item 1}{Item 4}
+\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+Albert Einstein discovered that $e=mc^2$ in 1905.
+
+\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}

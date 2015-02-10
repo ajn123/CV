@@ -1,0 +1,96 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass{my_cv}
+ 
+% adjust the page margins
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Alex `A.J'}{Norton}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{2422 Nottingham Drive}{22043 Falls Church Virginia}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
+\email{alexnorton@vt.edu}                               % optional, remove / comment the line if not wanted
+\homepage{ajnorton.com}                         % optional, remove / comment the line if not wanted
+\social[github][github.com/ajn123]{ajn123}
+\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+%\quote{Seeking a full time position in software development }                                 
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+\section{Education}
+\cventry{2011--2015}{Computer Science}{Virginia Tech}{Blacksburg, VA}{GPA: \textit{3.85/4.00}}{}  % arguments 3 to 6 can be left empty
+\begin{itemize}
+\item Majored in Computer Science with a Mathematics Minor
+\item Studied abroad in Oxford, England
+\end{itemize}
+
+\section{Work}
+\cventry{Summer 2014}{Software Developer Intern}{Amazon}{Seattle, WA}{}{Worked on implementing a semantic analyzer as an Eclipse plugin future in Java with Xtext}  % arguments 3 to 6 can be left empty
+\cventry{Summer 2013}{Software  Intern}{Cvent}{McLean, VA}{}{Implemented new logging library to allow for easy graphing and searching of errors; debugged information in Javascript}  % arguments 3 to 6 can be left empty
+\cventry{October 2012--January 2013}{Digital Content Intern}{Modea}{Blacksburg, VA}{}{Image creation, batching, resizing, and optimization in Photoshop}  % arguments 3 to 6 can be left empty
+
+
+
+
+\section{Projects}
+\cvitemwithcomment{Ephemeral Hadoop}{Utilize unshared resources on computers to run batch jobs on Hadoop}{JAVA, Hadoop}
+\cvitemwithcomment{Hokie Links}{Share class notes, comments, and links about Virginia Tech classes}{Rails,JS,SASS}
+\cvitemwithcomment{Schools Out API}{REST API to predict school closures based on weather}{Ruby On Rails}
+
+
+\section{Leadership}
+\cvitemwithcomment{Eagle Scout}{Refurbished my elementary school playground as a final project}{Boy Scouts}
+\cvitemwithcomment{Teaching Assistant}{Facilitated Intro to C programming and Intro to Python classes}{Virginia Tech}
+\cvitemwithcomment{Hokie Ambassador}{Give tours and presentations to aspiring Computer Science students}{Virginia Tech}
+
+
+\section{Experience}
+\cventry{2013}{Undergraduate Research}{S.O.F.I.A Android project}{Virginia Tech}{}{}  % arguments 3 to 6 can be left empty
+\begin{itemize}
+\item Development of game logic:  handling the main game loop, advanced timing controls, and other features so that intro CS students would not have to individually reinvent the logic
+\end{itemize}
+\cventry{2012--Now}{AppleJuiceTeaching}{Youtube Channel}{Internet}{}{}  % arguments 3 to 6 can be left empty
+\begin{itemize}
+\item Develop tutorials and references for easy comprehension about Computer Science best practices
+\end{itemize}
+
+
+\section{Skills}
+\cvlistdoubleitem{Ruby/Rails  }{Linux   }
+\cvlistdoubleitem{Java   }{Git  }
+\cvlistdoubleitem{C  }{Javascript/Coffeescript  }
+
+\section{Familiar With}
+\cvlistdoubleitem{Adobe Illustrator  }{CSS/SASS  }
+
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
