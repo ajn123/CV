@@ -1,5 +1,5 @@
 # CV
-My resume
+Resume & Cover letter
 
 to view, clone and compile with
 ```bash
