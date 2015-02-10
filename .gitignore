@@ -3,3 +3,4 @@
 *.out
 *.log
 *.gz
+*.gz(busy)
