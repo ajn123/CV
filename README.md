@@ -6,3 +6,8 @@ To view, clone and compile with:
 pdflatex <filename.tex>
 open <filename.pdf>
 ```
+OR
+```
+make resume # compile and open resume
+make cover # compile and open cover
+```
