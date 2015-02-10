@@ -3,12 +3,12 @@ COVER=alex_norton_cover_letter
 TEX=pdflatex
 BUILDTEX=$(TEX) $(PROJECT).tex
 
-all:
+resume:
 	$(BUILDTEX)
 	open $(PROJECT).pdf
 
 cover:
-	$(TEX) alex_norton_cover_letter.tex
+	$(TEX) $(COVER).tex
 	open $(COVER).pdf
 	
 
