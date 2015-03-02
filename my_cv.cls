@@ -14,8 +14,8 @@
  \geometry{
  left=15mm,
  right=15mm,
- top=5mm,
- bottom=5mm,
+ top=15mm,
+ bottom=15mm,
 }
 \RequirePackage{amssymb}
 
