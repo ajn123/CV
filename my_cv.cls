@@ -15,9 +15,11 @@
  left=15mm,
  right=15mm,
  top=15mm,
- bottom=15mm,
+ bottom=5mm,
 }
 \RequirePackage{amssymb}
+
+\newcommand{\college}{Virginia Tech}
 
 % personal data
 \name{Alex `A.J'}{Norton}
