@@ -18,6 +18,7 @@
  bottom=5mm,
 }
 \RequirePackage{amssymb}
+\RequirePackage{fontawesome}
 
 \newcommand{\college}{Virginia Tech}
 
