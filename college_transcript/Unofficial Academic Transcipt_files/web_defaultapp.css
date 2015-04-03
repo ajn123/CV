@@ -1,0 +1,1746 @@
+/*
+  AUDIT TRAIL: 5.2
+  1. Initial release.                        JWF 1/9/2002
+  AUDIT TRAIL: 5.3
+  2. For September 2002 release.             GPV 6/27/2002
+  3. FOR UI phase II release		     RK  7/29/2002
+     Following new classes added
+
+     Tables
+           DATA With Border (Table class with borders)
+		Its related classes defined as db.
+ 	   Non Tabular Data
+		Related classes defined as (nt)
+
+     	   Header class (TD.plheadermenulinks) for plain table.
+	        This class defines attributes for header tables.
+
+     Anchors
+	   menulinktext2 (Menu classes)
+	   sitemaplevel1 (Site Map level 1)
+	   sitemaplevel2 (Site Map level 2)
+	   sitemaplevel3 (Site Map level 3)
+
+    	   whitespace link (This anchor gives more spacing at top and bottom)
+
+  4. Fix for defect #53-0017 and #53-0018    Rk 8/23/2002
+	  Added a campus pipeline class which will be used in body tag.
+          Changed Input bg color to white
+  5. Added a class fieldmediumtextbold for student 		Rk 9/3/2002
+
+  AUDIT TRAIL:7.0						Rk 6/22/04
+  1. Modify fonts to use Verdana
+  2. Added tab styles to self service
+
+  AUDIT TRAIL:7.4						Rk 6/22/04
+  1. Field fieldOrangetextbold modified to use hex value instead of orange color
+  2. HR style modified to remove height as an attributte
+
+  AUDIT TRAIL:8.1	         PNN 08/07/2008
+  1. Add style tabdisable to emulate a tab page been disabled.
+
+  AUDIT TRAIL: 8.4.2
+  1. Defect 1-EO84OX         LVH 04/21/2011
+     A duplicate set of achor rules were defined and have been deleted.
+       A.whitespacelink
+       A.largelinktext
+       A.sitemaplevel1
+       A.sitemaplevel1:visited
+       A.sitemaplevel1:hover
+       A.sitemaplevel2
+       A.sitemaplevel2:visited
+       A.sitemaplevel2:hover
+       A.sitemaplevel3
+       A.sitemaplevel3:visited
+       A.sitemaplevel3:hover
+
+  AUDIT TRAIL: 8.5.1
+  1. Defect  1-11T5Y3K       LVH 01/12/2012
+     In certain browsers (specifically FireFox), the alignment classes
+     (centeraligntext, rightaligntext, leftaligntext) were not being processed
+     correctly. A set of td.<type>default p.<right|left|center>aligntext
+     statements were added at the end with margin:0 and text-align parameters.
+     
+   AUDIT TRAIL: 8.5.2
+  1. Defect  1-15QUOTC      EM 05/24/2012   
+     Added default border style for dbdead class.
+     Added default border style for bordertable class.
+   ---------------------- Virginia Tech Modifications -----------------------
+  1. Added .vtheader                                            BJM 03/02/2005
+  2. changed margin-top: 8% to 1% in DIV.pageheaderdiv1         BJM 03/02/2005
+     **---------- ABOVE VT MODIFICATIONS RE-APPLIED on 2/13/09 by murrayr ------
+  3. Correct the location of web_tab_corner.gif           murrayr 08/27/09      
+     **---------- ABOVE VT MODIFICATIONS RE-APPLIED on 1/11/12 by hdhashim -----
+     **-----------ABOVE VT MODIFICATIONS RE-APPLED on 7/13/12 by hedrickl-------
+  AUDIT TRAIL END
+
+  Copyright 2002 - 2012 Datatel+SGHE.  All rights reserved.               
+
+  FILE NAME..: web_defaultapp.css
+  RELEASE....: 8.5.2
+  PRODUCT....: WTLWEB
+  COPYRIGHT..: Copyright 2002 - 2012 Datatel+SGHE.  All rights reserved.
+*/
+
+
+/* BROWSER CONSIDERATIONS - Overall
+   ========================================================
+   Rule:   Set margin-left and margin-right only on BODY, not on DIVS.
+   Reason: Older browsers do not recognize margins on DIVs.
+
+   Rule:   No underscores.
+   Reason: Underscores are not valid in CSS syntax.
+
+   Rule:   Use percentages to define font sizes. Normal text should be 90%.
+   Reason: Presents text in the user's preferred font size. Facilitates page fluidity.
+
+   Rule:   Use precentages to define margins.
+   Reason: Facilitates page fluidity.
+
+   Rule:   Apply font rules to TD and TH elements. Do not rely on inheritance from the BODY.
+   Reason: Some browsers do not support inheritance well.
+*/
+
+/* TEXT CLASSES                                             */
+/* All text classes should have rules defined for at least  */
+/* the following properties (unless the class has a special */
+/* purpose):                                                */
+/* color, font-family, font-weight, font-size, font-style   */
+/* text-align                                               */
+/* ======================================================== */
+/* START added Virginia Tech - bjm  - 03/02/2005 */
+.vtheader {
+           background-color:   #800000;     /* 800000 is maroon */
+           BORDER-BOTTOM:      #f60 solid;
+           MARGIN:             1% 1% 0em;
+           HEIGHT:             50px;
+           BORDER-RIGHT-WIDTH: 2px;
+           FONT-SIZE: 100%;
+}  
+/* END added Virginia Tech - bjm  - 03/02/2005 */
+.centeraligntext {
+text-align: center;
+}
+
+.leftaligntext {
+text-align: left;
+}
+
+.rightaligntext {
+text-align: right;
+}
+
+.menulisttext {
+list-style: none;
+}
+
+.captiontext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: italic;
+text-align: left;
+margin-top: 1em;
+}
+
+.skiplinks {
+display: none;
+}
+
+.pageheaderlinks {
+color: #FFFFFF;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: center;
+}
+
+.requirementnotmet {
+color: black;
+}
+
+/* Class for Sub-menu Items                                  */
+/* ========================================================  */
+.pageheaderlinks2 {
+color: #CED5EA;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-size: 90%;
+text-align: justify;
+}
+
+.pagebodylinks {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: center;
+}
+
+.gotoanchorlinks {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.pagefooterlinks {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: center;
+/* BROWSER CONSIDERATION - To make Netscape and IE compatible for PageFooter Division. */
+/* Margin-left style specified for Netscape within parent SPAN tag,                    */
+/* while IE uses the padding-left style within parent DIV tag.                         */
+margin-left: 3px;
+}
+
+.backlinktext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: right;
+margin-bottom: 5px;
+}
+
+.menuheadertext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 100%;
+font-style: normal;
+text-align: left;
+}
+
+.menulinktext {
+color: #0F2167;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-style: normal;
+}
+
+.menulinkdesctext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.normaltext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.infotext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.errortext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.warningtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.multipagemsgtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.releasetext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+text-transform: uppercase;
+}
+
+.requiredmsgtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldlabeltext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldlabeltextinvisible {
+display: none;
+}
+
+.fieldrequiredtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldformattext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldformatboldtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fielderrortext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldsmallboldtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldsmalltext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldmediumtext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldlargetext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 110%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldmediumtextbold {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldOrangetextbold {
+color:#FFA500;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+
+
+/* ANCHORS (LINKS)                                          */
+/* ======================================================== */
+A:link{color:#0000ff;text-decoration:none;}
+
+A:visited{color:#0000ff;text-decoration:none;}                      /* BJM VT MOD 03/03/2005 changed color from #660099 to #0000ff */
+
+A:active{color:#990000;}
+
+A:hover{color:#990000;text-decoration:underline;}
+
+
+/* ANCHOR Definitions for Home Page MenuItems class.        */
+/* ======================================================== */
+A.menulinktext {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+font-style: normal;
+color:#0000ff;
+text-decoration: none;
+}
+
+
+A.submenulinktext {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-transform: none;
+color:#0000ff;
+text-decoration: none;
+}
+
+A.submenulinktext:hover {
+background-color: #1E2B83;
+font-family:  verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+font-style: normal;
+text-align: justify;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+A.submenulinktext:visited {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+font-style: normal;
+text-transform: none;
+color:#660099;
+text-decoration: none;
+}
+
+A.submenulinktext:visited:hover {
+background-color: #1E2B83;
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+font-style: normal;
+text-align: justify;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+A.submenulinktext2 {
+font-weight: normal;
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+color:#0000ff;
+text-decoration:none;
+}
+
+A.submenulinktext2:hover {
+font-weight: normal;
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+color:#990000;
+text-decoration:underline;
+}
+
+A.submenulinktext2:visited {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;                                                  /* BJM VT MOD 03/03/2005 changed from normal to bold */
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+font-style: normal;
+color:#0000ff;                                                      /* BJM VT MOD 03/03/2005 changed color from #660099 to #0000ff */
+text-decoration: none;
+}
+
+A.submenulinktext2:visited:hover {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;                                                  /* BJM VT MOD 03/03/2005 changed from normal to bold */
+font-size: 99%;                                                     /* BJM VT MOD 03/03/2005 changed size from 90% to 99% */
+text-decoration:underline;
+color:#990000;
+}
+
+
+
+A.whitespacelink
+{
+line-height: 200%;
+COLOR: #1E2B83;
+text-decoration: underline;
+}
+
+
+A.largelinktext {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 110%;
+font-style: normal;
+text-align: left;
+text-decoration: underline;
+}
+
+
+A.sitemaplevel1 {
+font-family:  Verdana,Arial, helvetica, sans-serif;
+font-weight: bold;
+font-size: 80%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:       #1E2B83;
+}
+
+A.sitemaplevel1:visited {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#660099;
+}
+
+A.sitemaplevel1:hover {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration:underline;
+color:#990000;
+}
+
+
+A.sitemaplevel2 {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 70%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#0000ff;
+}
+
+A.sitemaplevel2:visited {
+font-family:  Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 70%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#660099;
+}
+
+A.sitemaplevel2:hover {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size  : 70%;
+font-style : normal;
+text-align : left;
+text-decoration:underline;
+color:#990000;
+}
+
+A.sitemaplevel3 {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 60%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#0000ff;
+}
+
+A.sitemaplevel3:visited {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 60%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#660099;
+}
+
+A.sitemaplevel3:hover {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size  : 70%;
+font-style : normal;
+text-align : left;
+color:#990000;
+text-decoration:underline;
+}
+
+.whitespace1{
+padding-top:0em;
+}
+
+.whitespace2{
+padding-top:1em;
+}
+.whitespace3{
+padding-top:2em;
+}
+.whitespace4{
+padding-top:3em;
+}
+
+/* BODY                                                     */
+/* ======================================================== */
+BODY {
+background-color: #FFFFFF;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 0px;
+margin-left: 1%;
+margin-right: 2%;
+/*background-image: url(/apps/dbms/oracle/webdocs/banprod/wtlgifs/web_bg_app.jpg); */
+background-repeat: no-repeat;
+}
+BODY.campuspipeline {
+background-color: #FFFFFF;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 6px;
+margin-left: 2%;
+background-image: none;
+background-repeat: no-repeat;
+}
+BODY.previewbody {
+background-color: #FFFFFF;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+margin-left: 2%;
+margin-right: 2%;
+
+/* Override the background image in the main BODY */
+background-image: none;
+}
+
+BODY.validationbody {
+background-color: #FFFFFF;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+margin-left: 0%;
+margin-right: 2%;
+/* Override the background image in the main BODY */
+background-image: none;
+}
+
+/* DIVIDES                                                  */
+/* All divides should have rules defined for margin and     */
+/* text-align.                                              */
+/* ======================================================== */
+DIV.menulistdiv {
+text-align: left;
+}
+
+DIV.headerwrapperdiv {
+
+margin-left: 0px;
+margin-top: 0px;
+}
+
+DIV.pageheaderdiv1 {
+
+text-align: left;
+margin-top: 1%;                /* Virginia Tech Mod - BJM 03/02/2005 changed from 8% to 1% */
+margin-left: 0px;
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+
+}
+
+DIV.pageheaderdiv2 {
+text-align: right;
+margin-top: 10px;
+margin-right: 10px;
+position: absolute;
+top: 0px;
+right: 0px;
+float: right;
+display: none;
+
+}
+
+DIV.headerlinksdiv {
+text-align: left;
+margin-right: 0%;
+
+}
+
+/* Class for BANNER SEARCH Form text and button controls     */
+/* ========================================================  */
+DIV.headerlinksdiv2 {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+text-transform: none;
+}
+
+DIV.bodylinksdiv {
+text-align: center;
+margin-top: 1%;
+}
+
+DIV.footerlinksdiv {
+text-align: center;
+}
+
+DIV.backlinkdiv {
+text-align: right;
+margin-top: -40px;
+}
+
+DIV.pagetitlediv {
+text-align: left;
+}
+
+DIV.infotextdiv {
+text-align: left;
+}
+
+DIV.pagebodydiv {
+text-align: left;
+}
+
+DIV.pagefooterdiv {
+text-align: left;
+border: 0px;
+margin-top: 0px;
+float: left;
+}
+
+DIV.poweredbydiv {
+text-align: right;
+margin-right: -1px;
+margin-top: 0px;
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+float: right;
+}
+
+DIV.previewdiv {
+text-align: center;
+}
+
+DIV.validationdiv {
+text-align: center;
+}
+
+DIV.staticheaders {
+text-align: right;
+font-size:  90%;
+}
+/* HEADERS                                                  */
+/* Do not set font-size for headers - defer to browser.      */
+/* ======================================================== */
+/* H1 is reserved for Page Header */
+H1 {
+color: #FFFFFF;
+font-family: verdana, Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-style: normal;
+font-size:0%;
+margin-top: 0px;
+}
+
+
+/* H2 is reserved for Page Title */
+H2 {
+color	   : BLACK;
+font-family: verdana, Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-style : normal;
+}
+
+/* H3 is reserved for Sub Title */
+H3 {
+color	   : BLACK;
+font-family: verdana, Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-style : normal;
+}
+
+/* Horizontal Rule for Menu Section                         */
+/* ======================================================== */
+
+HR {
+ /* color: #CCCC33; */  /* bjm 10/19/2005 */
+color: #800000;         /* bjm 10/19/2005 */
+text-align: left;
+vertical-align: top;
+margin-top: -10px;
+}
+
+HR.pageseprator {
+ /* color: #003366; */  /* bjm 10/19/2005 */
+color: #800000;         /* bjm 10/19/2005 */
+text-align: left;
+vertical-align: top;
+}
+
+
+/* FORM CONTROLS                                            */
+/* ======================================================== */
+INPUT {
+/*background-color: #FFFFFF;*/
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+}
+
+
+TEXTAREA {
+/*background-color: #FFFFFF;*/
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+
+}
+
+SELECT {
+/*background-color: #FFFFFF;*/
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+}
+
+
+
+/* TABLES                                                   */
+/* ======================================================== */
+TABLE.dataentrytable {
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+TABLE.datadisplaytable {
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+TABLE.plaintable {
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+TABLE.menuplaintable {
+/* Create a horizontal rule effect. */
+border-top: 1pt #707070 solid;
+}
+
+TABLE.pageheadertable {
+margin-top: 0px;
+}
+
+TABLE.colorsampletable {
+background-color: #FFFFFF;
+}
+
+TABLE.bordertable {
+border-collapse:collapse;
+border-bottom: 1px solid;
+border-left: 1px solid;
+border-right: 1px solid;
+border-top: 1px solid;
+/* Fix for Defect 1-15QUOTC */
+border: 1px solid black; 
+}
+
+/* TABLE HEADERS AND DATA CELLS                             */
+/* ======================================================== */
+TABLE TH {
+vertical-align: top;
+color: black;
+}
+
+TABLE TD {
+vertical-align: top;
+color: black;
+}
+
+.pageheadertablecell {
+text-align: left;
+}
+
+.pageheadernavlinkstablecell {
+text-align: right;
+}
+
+/* DATA ENTRY TABLE HEADERS AND DATA CELLS                  */
+/* Some font rules are redunant because they do not         */
+/* inherit well from the BODY on older browsers.            */
+/* ======================================================== */
+TABLE TD.deheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.deheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.detitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TH.detitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TD.delabel {
+/*background-color: #E3E5EE;*/
+background-color: #E3E5EE;                                            /* BJM VT MOD 03/03/2005 changed background to have color */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.delabel {
+/*background-color: #E3E5EE;*/
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.deseparator {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dehighlight {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dedead {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dedefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dewhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.deborder {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+border: 1px solid;
+
+}
+
+/* DATA DISPLAY TABLE HEADERS AND DATA CELLS                */
+/* Some font rules are redunant because they do not         */
+/* inherit well from the BODY on older browsers.            */
+/* ======================================================== */
+TABLE TD.ddheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ddheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ddtitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TH.ddtitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TD.ddlabel {
+/*background-color: #E3E5EE;*/
+background-color: #E3E5EE;                                  /* BJM VT MOD 03/03/2005 changed background to have color */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ddlabel {
+/*background-color: #E3E5EE;*/
+background-color: #E3E5EE;                                            /* BJM VT MOD 03/03/2005 changed background to have color */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+
+TABLE TD.ddseparator {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ddhighlight {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dddead {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dddefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/*border-bottom: 1pt #BFBFBF solid; */
+}
+
+TABLE TD.ddnontabular {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ddwhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+/* PLAIN TABLE HEADERS AND DATA CELLS                       */
+/* These table data cell classes pertain to a table that is */
+/* used strictly for layout. They do not have the redundant */
+/* font rules because it is assumed that whatever is placed */
+/* in these TD/TH tags will have its own class.             */
+/* ======================================================== */
+TABLE TD.pltitle {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-weight: bold;
+}
+
+TABLE TD.plheader {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-size: 90%;
+font-weight: bold;
+}
+
+TABLE TH.pllabel {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-size: 90%;
+font-weight: bold;
+}
+
+TABLE TD.plseparator {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.plhighlight {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.pldead {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.pldefault {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.plwhite {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+
+}
+TABLE TD.plheaderlinks {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+
+}
+
+
+/*========================================================*/
+/*=======  Class for header links=========================*/
+/*========================================================*/
+
+TABLE TD.plheadermenulinks {
+font-weight: normal;
+/*background-color:#CED5EA;*/
+}
+
+
+
+
+/* MENU PLAIN TABLE HEADERS AND DATA CELLS                  */
+/* ======================================================== */
+TABLE TD.mptitle {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.mpheader {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.mplabel {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.mpwhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.mpdefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.indefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+/* Define tables with border				    */
+/* ======================================================== */
+TABLE TD.dbheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TH.dbheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TD.dbtitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+border: 1px solid;
+}
+
+TABLE TH.dbtitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+border: 1px solid;
+}
+
+TABLE TD.dblabel {
+/*background-color: #E3E5EE;*/
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TH.dblabel {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+TABLE TD.dbdefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+/* Fix for defect 1-15QUOTC - define default border style for dbdead class - start */
+TABLE TD.dbdead {
+	border: 1px solid black;
+}
+/* Fix for defect 1-15QUOTC - define default border style for dbdead class - End */
+
+
+/* NON TABULAR TABLE DATA DISPLAY  HEADERS AND DATA CELLS  */
+/* Some font rules are redunant because they do not         */
+/* inherit well from the BODY on older browsers.            */
+/* ======================================================== */
+TABLE TD.ntheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ntheader {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.nttitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TH.nttitle {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TD.ntlabel {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ntlabel {
+background-color: #E3E5EE;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntseparator {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.nthighlight {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntdead {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntdefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntwhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+/*
+
+New Tab styles for Self Service
+
+*/
+.bgtabon {
+    /* BACKGROUND-COLOR: #003366 */  /* bjm 10/24/2005 */
+    BACKGROUND-COLOR: #800000        /* bjm 10/24/2005 */
+}
+.bgtaboff {
+	BACKGROUND-COLOR: #cccccc
+}
+.texttabon {
+	COLOR: #ffffff
+}
+.texttaboff {
+	COLOR: #000000
+}
+.tabon {
+/*  PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/apps/dbms/oracle/webdocs/banprod/wtlgifs/web_tab_corner.gif); COLOR: #ffffff; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #800000 */ /* bjm 10/24/2005 */
+    PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/banprod/wtlgifs/web_tab_corner.gif); COLOR: #ffffff; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #800000/* murrayr 8/27/2009 */
+    /* PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/wtlgifs/web_tab_corner.gif); COLOR: #ffffff; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #003366*/ /* bjm 10/24/2005 */
+}
+.tabon A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tabon A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tabon A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tabon A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.taboff {
+	PADDING-LEFT: 8px;
+      FONT-WEIGHT: bold;
+      FONT-SIZE: 12px;
+     /*      BACKGROUND-IMAGE: url(/apps/dbms/oracle/webdocs/banprod/wtlgifs/web_tab_corner.gif);  */
+      BACKGROUND-IMAGE: url(/banprod/wtlgifs/web_tab_corner.gif); /* murrayr 08/27/09 */
+      COLOR: #000000;
+      BACKGROUND-REPEAT: no-repeat;
+      BACKGROUND-COLOR: #cccccc
+}
+.taboff A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.taboff A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.taboff A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.taboff A:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+
+/* 80100-1 */
+.tabdisable {
+	PADDING-LEFT: 8px;
+      FONT-WEIGHT: bold;
+      FONT-SIZE: 12px;
+         BACKGROUND-IMAGE: url(/banprod/wtlgifs/web_tab_corner.gif); /* murrayr 08/27/09 */
+/*       BACKGROUND-IMAGE: url(/wtlgifs/web_tab_corner.gif); */
+
+      COLOR: #F2F2F2;
+      BACKGROUND-REPEAT: no-repeat;
+      BACKGROUND-COLOR: #cccccc
+}
+.tabdisable A:link {
+	COLOR: #F2F2F2; TEXT-DECORATION: none
+}
+.tabdisable A:visited {
+	COLOR: #F2F2F2; TEXT-DECORATION: none
+}
+.tabdisable A:active {
+	COLOR: #F2F2F2; TEXT-DECORATION: none
+}
+.tabdisable A:hover {
+	COLOR: #F2F2F2; TEXT-DECORATION: none
+}
+
+.bg3 {
+        /* BACKGROUND-COLOR: #cccc00 */  /* bjm 10/24/2005 */
+    BACKGROUND-COLOR: #800000        /* bjm 10/24/2005 */
+}
+
+
+/*
+Enforce right alignment, specifically for Firefox, but works in all
+*/
+td.dbdefault p.rightaligntext {
+text-align: right;
+margin: 0;
+}
+td.dedefault p.rightaligntext {
+text-align: right;
+margin: 0;
+}
+td.dddefault p.rightaligntext {
+text-align: right;
+margin: 0;
+}
+td.mpdefault p.rightaligntext {
+text-align: right;
+margin: 0;
+}
+td.ntdefault p.rightaligntext {
+text-align: right;
+margin: 0;
+}
+td.pldefault p.rightaligntext {
+text-align: right;
+margin: 0;
+}
+/*
+Enforce left alignment, specifically for Firefox, but works in all
+*/
+td.dbdefault p.leftaligntext {
+text-align: left;
+margin: 0;
+}
+td.dedefault p.leftaligntext {
+text-align: left;
+margin: 0;
+}
+td.dddefault p.leftaligntext {
+text-align: left;
+margin: 0;
+}
+td.mpdefault p.leftaligntext {
+text-align: left;
+margin: 0;
+}
+td.ntdefault p.leftaligntext {
+text-align: left;
+margin: 0;
+}
+td.pldefault p.leftaligntext {
+text-align: left;
+margin: 0;
+}
+/*
+Enforce center alignment, specifically for Firefox, but works in all
+*/
+td.dbdefault p.centeraligntext {
+text-align: center;
+margin: 0;
+}
+td.dedefault p.centeraligntext {
+text-align: center;
+margin: 0;
+}
+td.dddefault p.centeraligntext {
+text-align: center;
+margin: 0;
+}
+td.mpdefault p.centeraligntext {
+text-align: center;
+margin: 0;
+}
+td.ntdefault p.centeraligntext {
+text-align: center;
+margin: 0;
+}
+td.pldefault p.centeraligntext {
+text-align: center;
+margin: 0;
+}
+
+

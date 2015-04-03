@@ -1,0 +1,106 @@
+/*
+  AUDIT TRAIL: 8.2                                             LVH 03/05/2009
+  1. Defect 1-4V8J50
+     Change the H1 header to a no-display to prevent erroneous printing.
+
+  AUDIT TRAIL: 7.3                                             LVH 02/03/2006
+  1. Defect LN71-008-1740
+     The SEARCH box and Site Map, Menu, Help, and Exit should not be displayed
+     when a page is printed.
+  2. Defect 1-FHOGD                                            MEC 04/18/2006
+     Add background-image: none to the BODY element, so that the background
+     image will not be printed and overlay text on multiple print pages.
+  AUDIT TRAIL: 6.0
+  1. Hide HR tag for printing					Rk 3/26/2003
+  2. Reduce font sizes for datadisplay tables to fit in page. This will be useful
+     for pages which have lot of content.
+
+  AUDIT TRAIL: 5.3
+  1. Initial release.                        rk 6/14/2002
+
+	This style sheet will be used for print media.
+	Use this style sheet to define print tags.
+        This style sheet can also be used to override styles from application pages.
+
+  AUDIT TRAIL END
+
+  FILE NAME..: web_defaultprint.css
+  RELEASE....: 8.2
+  PRODUCT....: WTLWEB
+  COPYRIGHT..: Copyright (C) SunGard 2002-2009. All rights reserved.
+*/
+
+
+@media print
+{
+  /* style sheet for print goes here */
+
+BODY {
+font-family: Arial, verdana, helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 0%;
+margin-left: 0%;
+background-image: none;
+}
+
+DIV.backlinkdiv {
+display:none
+}
+
+DIV.pageheaderdiv2 {
+display: none
+}
+
+DIV.headerlinksdiv {
+display: none
+}
+/* Defect LN71-008-1740 */
+DIV.headerlinksdiv2 {
+display: none
+}
+
+DIV.poweredbydiv {
+display: none
+}
+
+DIV.footerlinksdiv{
+display: none
+}
+
+HR {
+color: #FFFFFF;
+text-align: left;
+vertical-align: top;
+margin-top: 0px;
+}
+
+/* Defect 1-4V8J50 */
+H1 {
+display: none
+}
+
+/* Defect LN71-008-1740 */
+SPAN.pageheaderlinks {
+display: none
+}
+
+Table.datadisplaytable{
+font-size :80%
+}
+
+
+TABLE TD.dddefault {
+font-size:75%;
+}
+
+TABLE TH.dddefault {
+font-size: 80%;
+}
+
+Table TH.ddlabel
+{
+font-size: 80%;
+}
+}
