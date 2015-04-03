@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 \documentclass{my_cv}
- 
+
 % adjust the page margins
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -15,8 +15,7 @@
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
-
-%\quote{Seeking a full time position in software development }                                 
+\quote{Seeking a full time position in software development }
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -34,25 +33,73 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 %-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+% recipient dat
+\newcommand{\companyName}{Google}
+\recipient{\companyName \ Recruitment team}{\companyName \\123 somestreet\\some city}
 \date{\today}
 \opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
+\closing{Sincerely,}
 \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
 
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+\indent Hello my name is Alex Norton.   I am seeking an entry-level software developer
+position with \companyName.   I graduate this December with a bachelor’s degree in
+Computer Science and hands on experience with Ruby on Rails to create and
+implement web applications.
 
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+As an undergraduate teaching assistant for the past year and an Amazon SDE
+intern this summer.  I have learned how to collaborate with a team and work
+outside my knowledge set.
 
-Albert Einstein discovered that $e=mc^2$ in 1905.
+At my internship at Amazon, my responsibilities included version control,
+semantic highlighting and executing runtime environments.  All of the above
+helped me understand the collaboration process between peers that must be
+done in order to carry out a finely polished product.  My biggest discovery
+was that to be successful in any field hinges on your ability to work
+diligently with your coworkers to constantly over achieve.
 
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+I have had three years of experience in Java.  I also have two years
+experience in C, writing implementations of malloc(), web server, and a
+simple shell.  I feel this knowledge of computer systems and optimization
+knowledge will be a great benefit to the company.
+
+In my software design capstone, a group of five of us created 
+a Hadoop cluster that will automatically connect computers to
+form a wireless cluster in a classroom so that resources from every
+computer can be utilized to perform big data tasks.  The project will
+require research on what needs to be done as well as collaboration with
+Hadoop to understand this new technology.  My responsibilities include
+project documentation, scripting automation, and overall high-level
+design.
+
+I have a strong knowledge base in coding ever since I picked it up in
+college.  I understand that working at \companyName will require not only
+motivation to work everyday, but a never-ending desire to pursue my best
+work and improve upon that.  I have much to learn and much to
+contribute.  My mother always taught me that after you work hard, you
+work harder.  That is what I intend to do for my professional career at
+\companyName.
+
+Lastly, let my state next that I truly love what I do.  In my spare time
+I make YouTube videos of programming tips that I learn.  These videos
+help me stay focused on what I am learning in class and help me review
+later on.  Doing this has allowed to interact with other aspiring
+programmers around the world and help them learn to code.  What draws me
+to programming is that sort of interaction.  When you are on your
+computer you can be a superhero.  You can move things around the world,
+make people laugh, and change society all at your fingertips.  \companyName
+has the same drive behind itself.  At its core, ....
+
+I am very interested in working for \companyName \ and would like the
+opportunity to discuss a position with you.  My resume is attached
+below.  I will contact you in a week to ten days to answer any questions
+you may have. Thank you for your consideration.   I look forward to
+speaking you about this opportunity. 
+
+I believe that as a \companyName \  Software Engineer I would have the opportunity
+to participate in cutting-edge projects that aim at improving people's lives.
 
 \makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+%\clearpage\end{CJK*}% if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
