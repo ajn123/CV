@@ -11,6 +11,5 @@ cover:
 	$(TEX) $(COVER).tex
 	open $(COVER).pdf
 	
-
 clean:
 	rm -f *.log *.bak *.aux *.bbl *.blg *.idx *.toc *.out *~
