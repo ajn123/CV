@@ -7,6 +7,8 @@ edited
 
 To view, clone and compile with:
 ```
+brew cask reinstall mactex # Download lualatex
+
 make resume # compile and open resume
 make cover # compile and open cover
 ```
