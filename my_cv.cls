@@ -29,6 +29,6 @@
 \address{2422 Nottingham Drive}{Falls Church, Virginia, 22043}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
 \email{alexnorton@vt.edu}                               % optional, remove / comment the line if not wanted
-\homepage{ajnorton.com}                         % optional, remove / comment the line if not wanted
+%\homepage{ajnorton.com}                          optional, remove / comment the line if not wanted
 \social[github][github.com/ajn123]{ajn123}
 \social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
