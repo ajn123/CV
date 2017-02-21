@@ -26,7 +26,7 @@
 \name{Alex `A.J'}{Norton}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
 
-\address{2422 Nottingham Drive}{Falls Church, Virginia, 22043}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{404 Rio Grande Street}{Austin, Texas, 78701}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
 \email{alexnorton@vt.edu}                               % optional, remove / comment the line if not wanted
 %\homepage{ajnorton.com}                          optional, remove / comment the line if not wanted
