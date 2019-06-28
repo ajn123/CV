@@ -28,7 +28,7 @@
 
 \address{404 Rio Grande Street}{Austin, Texas, 78701}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
-\email{alexnorton@vt.edu}                               % optional, remove / comment the line if not wanted
+\email{alexjnorton@protonmail.com}
 %\homepage{ajnorton.com}                          optional, remove / comment the line if not wanted
 \social[github][github.com/ajn123]{ajn123}
-\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
+%\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
