@@ -26,9 +26,9 @@
 \name{Alex `A.J'}{Norton}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
 
-\address{404 Rio Grande Street}{Austin, Texas, 78701}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{2422 Nottingham Drive}{Falls Church, Virginia, 22043}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
-\email{alexjnorton@protonmail.com}
+\email{alex.norton.dev@gmail.com}
 \homepage{ajn123.github.io/portfolio} 
 \social[github][github.com/ajn123]{ajn123}
 %\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
