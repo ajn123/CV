@@ -12,9 +12,9 @@
 \RequirePackage[utf8]{inputenc}          
 \RequirePackage{geometry} % changes margins across the page
  \geometry{
- left=15mm,
- right=15mm,
- top=15mm,
+ left=10mm,
+ right=10mm,
+ top=10mm,
  bottom=5mm,
 }
 \RequirePackage{amssymb}
@@ -31,4 +31,5 @@
 \email{alex.norton.dev@gmail.com}
 \homepage{linkedin.com/in/ajnorton}
 \social[github][github.com/ajn123]{ajn123}
+
 %\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
