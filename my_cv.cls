@@ -30,6 +30,6 @@
 \phone[mobile]{+1~(571)~405~0833}                   % optional, remove / comment the line if not wanted
 \email{alexnorton@vt.edu}
 \homepage{linkedin.com/in/ajnorton}
-\social[github][github.com/ajn123]{ajn123}
+%\social[github][github.com/ajn123]{ajn123}
 
 %\social[linkedin][linkedin.com/in/ajnorton]{ajnorton}
